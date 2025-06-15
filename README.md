@@ -46,3 +46,16 @@ Create a `.env` file in the project root and include:
 - EMAIL_HOST_USER=your_email@gmail.com # your email
 - EMAIL_HOST_PASSWORD=your_app_password # app password (not your actual email password)
 - TELEGRAM_TOKEN=your_telegram_bot_token # from BotFather
+
+  ## 🚀 Running the Project
+
+Once your environment is configured, follow the steps below to run the project locally:
+
+### 1. Apply Migrations
+
+This sets up your database schema.
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+
