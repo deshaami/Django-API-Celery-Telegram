@@ -59,3 +59,10 @@ This sets up your database schema.
 python manage.py makemigrations
 python manage.py migrate
 
+### 2. Start Celery Worker
+
+In a new terminal window/tab, run:
+
+```bash
+celery -A myproject worker --loglevel=info
+
