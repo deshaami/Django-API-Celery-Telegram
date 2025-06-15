@@ -36,4 +36,19 @@ Built as part of an internship assignment, the application provides public and p
 
 ## 📊 Folder Structure
 
-<pre><code>```yaml Django-API-Celery-Telegram/ ├── api/ # Core Django app for REST APIs │ ├── views.py │ ├── urls.py │ ├── tasks.py # Celery tasks │ └── ... ├── myproject/ # Django project settings │ ├── settings.py │ ├── urls.py │ └── celery.py # Celery app setup ├── telegram_app/ # Telegram Bot Logic │ ├── views.py │ ├── urls.py │ └── models.py ├── .env # Environment variables ├── requirements.txt # Project dependencies ├── README.md # Project documentation └── manage.py ```</code></pre>
+📁 django_assignment/
+├── 📂 api/                 
+│   ├── views.py
+│   ├── urls.py
+│   ├── tasks.py           
+│   └── models.py
+|   |___...
+├── 📂 myproject/           
+│   ├── settings.py
+│   ├── urls.py
+│   └── celery.py          → Celery app setup
+├── 📄 .env                 → Environment variables
+├── 📄 requirements.txt     → Project dependencies
+├── 📄 README.md            → Project documentation
+└── 📄 manage.py
+
