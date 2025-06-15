@@ -47,11 +47,13 @@ Create a `.env` file in the project root and include:
 - EMAIL_HOST_PASSWORD=your_app_password # app password (not your actual email password)
 - TELEGRAM_TOKEN=your_telegram_bot_token # from BotFather
 
-  ## 🚀 Running the Project
+  ## 🚀 Running the Project Locally
 
 Once your environment is configured, follow the steps below to run the project locally:
 
-### 1. Apply Migrations
+---
+
+### 1️⃣ Apply Migrations
 
 This sets up your database schema.
 
@@ -59,10 +61,10 @@ This sets up your database schema.
 python manage.py makemigrations
 python manage.py migrate
 
-### 2. Start Celery Worker
+2️⃣ Start Celery Worker
+Open a new terminal window or tab, then run the following command to start the Celery worker:
 
-In a new terminal window/tab, run:
-
-```bash
+bash
+Copy
+Edit
 celery -A myproject worker --loglevel=info
-
