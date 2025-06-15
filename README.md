@@ -1,2 +1,39 @@
-# Django-API-Celery-Telegram
-Django REST API with JWT Auth, Celery async tasks, and Telegram Bot integration. Clean, production-ready code for internship evaluation.
+# 🚀 Django REST API with Celery and Telegram Bot Integration
+
+## 🔖 Project Summary
+
+This Django-based project demonstrates core backend development skills including API development using **Django REST Framework**, user **authentication**, **Celery with Redis** for asynchronous tasks, and **Telegram Bot** integration.
+
+Built as part of an internship assignment, the application provides public and protected APIs, handles user registration and login, triggers asynchronous email sending upon registration, and interacts with users through a Telegram bot.
+
+---
+
+## 🧠 Features Implemented
+
+### 1. **API Endpoints (using Django REST Framework)**
+
+- **Public Endpoint**: Returns a public message accessible to all users.
+- **Protected Endpoint**: Requires token-based authentication.
+- **User Registration**: Registers a new user and sends a welcome email asynchronously using Celery.
+- **User Login**: Returns an authentication token on successful login.
+
+### 2. **Celery Integration**
+
+- Integrated Celery with **Redis** as the message broker.
+- Sends a **welcome email** to the user in the background after successful registration.
+
+### 3. **Telegram Bot Integration**
+
+- Telegram bot is set up using **Telegram Bot API**.
+- On receiving a `/start` command, the bot saves the user’s Telegram username and chat ID into the Django database.
+
+### 4. **Security and Configuration**
+
+- `DEBUG=False` set in production settings.
+- Sensitive values (Secret Key, DB credentials, API keys) stored using `.env` file.
+
+---
+
+## 📊 Folder Structure
+
+<pre><code>```yaml Django-API-Celery-Telegram/ ├── api/ # Core Django app for REST APIs │ ├── views.py │ ├── urls.py │ ├── tasks.py # Celery tasks │ └── ... ├── myproject/ # Django project settings │ ├── settings.py │ ├── urls.py │ └── celery.py # Celery app setup ├── telegram_app/ # Telegram Bot Logic │ ├── views.py │ ├── urls.py │ └── models.py ├── .env # Environment variables ├── requirements.txt # Project dependencies ├── README.md # Project documentation └── manage.py ```</code></pre>
