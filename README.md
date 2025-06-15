@@ -35,20 +35,5 @@ Built as part of an internship assignment, the application provides public and p
 ---
 
 ## 📊 Folder Structure
-
-📁 django_assignment/
-├── 📂 api/                 
-│   ├── views.py
-│   ├── urls.py
-│   ├── tasks.py           
-│   └── models.py
-|   |___...
-├── 📂 myproject/           
-│   ├── settings.py
-│   ├── urls.py
-│   └── celery.py          → Celery app setup
-├── 📄 .env                 → Environment variables
-├── 📄 requirements.txt     → Project dependencies
-├── 📄 README.md            → Project documentation
-└── 📄 manage.py
+<pre><code>📁 django_assignment/ ├── 📂 api/ │ ├── views.py │ ├── urls.py │ ├── tasks.py │ └── models.py │ └── ... # other modules/files ├── 📂 myproject/ │ ├── settings.py │ ├── urls.py │ └── celery.py → Celery app setup ├── 📄 .env → Environment variables ├── 📄 requirements.txt → Project dependencies ├── 📄 README.md → Project documentation └── 📄 manage.py </code></pre>
 
