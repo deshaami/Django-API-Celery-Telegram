@@ -37,3 +37,12 @@ Built as part of an internship assignment, the application provides public and p
 ## 📊 Folder Structure
 <pre><code>📁 django_assignment/ ├── 📂 api/ │ ├── views.py │ ├── urls.py │ ├── tasks.py │ └── models.py │ └── ... # other modules/files ├── 📂 myproject/ │ ├── settings.py │ ├── urls.py │ └── celery.py → Celery app setup ├── 📄 .env → Environment variables ├── 📄 requirements.txt → Project dependencies ├── 📄 README.md → Project documentation └── 📄 manage.py </code></pre>
 
+### 📁 Environment Variables (`.env`)
+
+Create a `.env` file in the project root and include:
+
+DEBUG=False
+SECRET_KEY=django-insecure-123your-secret-key-here
+EMAIL_HOST_USER=your_email@gmail.com # your email
+EMAIL_HOST_PASSWORD=your_app_password # app password (not your actual email password)
+TELEGRAM_TOKEN=your_telegram_bot_token # from BotFather
