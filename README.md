@@ -94,3 +94,82 @@ Finally, start the Django dev server:
 python manage.py runserver
 ```
 
+---
+
+## ⚙️ Celery Tasks Working
+
+After user registration, a **welcome email** is sent asynchronously using **Celery** and **Redis**.
+
+1. Redis must be running in the background:
+   ```bash
+   redis-server
+   ```
+
+2. Celery worker listens for tasks from Django:
+   ```bash
+   celery -A myproject worker --loglevel=info
+   ```
+
+3. On successful registration:
+   - The user data is saved to the database.
+   - A welcome email is automatically queued and sent using the `send_welcome_email` task.
+
+---
+
+## 🤖 Telegram Bot Integration
+
+1. Start your Django server:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+2. Expose your local server using [ngrok](https://ngrok.com/):
+
+   ```bash
+   ngrok http 8000
+   ```
+
+3. Set up the Telegram webhook using your bot token and ngrok public URL:
+
+   ```bash
+   https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=https://<your-ngrok-subdomain>.ngrok.io/telegram/
+   ```
+
+4. Open Telegram, search for your bot, and send the `/start` command.
+
+5. The bot will:
+   - Save your Telegram **username** and **chat ID** to the Django database.
+   - Optionally respond with a welcome message.
+
+> 🧪 Test this by checking your Django admin or database — new Telegram user entries will appear after `/start`.
+
+
+
+
+---
+
+## 📄 License & Author
+
+### 🔖 License
+
+This project is licensed under the **MIT License** – you are free to use, modify, and distribute the code for personal and educational purposes with proper attribution.
+
+---
+
+### 👤 Author
+
+Developed with ❤️ by **Aleena Roy**
+
+- 🎓 M.Tech in Robotics and Artificial Intelligence, RIT Pampady, Kerala  
+- 💻 Passionate about AI, Robotics, Machine Learning, and Research  
+- 📫 Contact: aleenapallippadavil@gmail.com
+Feel free to connect with me for research, collaboration, or opportunities related to AI and Robotics.
+
+---
+
+### 📢 Acknowledgements
+
+- Special thanks to the Django, DRF, Celery, and Telegram Bot API communities for their excellent documentation and tools.
+
+
