@@ -144,6 +144,31 @@ After user registration, a **welcome email** is sent asynchronously using **Cele
 
 > 🧪 Test this by checking your Django admin or database — new Telegram user entries will appear after `/start`.
 
+---
+
+## ✅ Testing & Validation
+
+All major components of the project were thoroughly tested using:
+
+- 🧪 **Postman**: For API testing (GET, POST with token authentication).
+- 💻 **Django Shell**: To manually call bot methods and test database entries.
+- 📱 **Telegram Bot**: Real-time interaction tested with `/start` command.
+
+### 📸 Screenshots
+
+
+You can find them in [images](./images).
+
+---
+
+## 🧪 Project Validated!
+
+This repository was built with a focus on:
+- Clean architecture
+- Modular Django apps
+- Celery working with Redis
+- Telegram bot integration
+- Tested with screenshots as proof
 
 
 
