@@ -24,6 +24,7 @@ Built as part of an internship assignment, the application provides public and p
 
 ### 3. **Telegram Bot Integration**
 
+- The Telegram bot functionality is **integrated within the `api/` app** inside the main project folder `django_assignment/`.
 - Telegram bot is set up using **Telegram Bot API**.
 - On receiving a `/start` command, the bot saves the user’s Telegram username and chat ID into the Django database.
 
